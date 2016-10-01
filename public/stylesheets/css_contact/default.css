@@ -135,6 +135,7 @@ border:none;
 .social-icon{}
 .social-icon a{margin-right: 20px;}
 .social-icon a i{
+margin-top: 30px;
 margin-left: 100px;
 background: white;
 border-radius: 500px;
