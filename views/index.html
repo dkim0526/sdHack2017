@@ -8,9 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+        <script>
+      var base_path = '/';
+        </script>    
+    <script src="../javascripts/vendor/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="../javascripts/instafeed.min.js"></script>
     <script type="text/javascript" src="../javascripts/insta.js"></script>
-
+    <script type="text/javascript" src="../javascripts/js.cookie.js"></script>
 
     <title>Creative - Start Bootstrap Theme</title>
 
@@ -88,16 +92,43 @@
                     <p class="text-faded3">3. Click Download button.<br>
                     <p class="text-faded4">4. Customize your picture quality!</p>
 
-                    <form>
-                      Paste URL :
-                      <input type="text" name="Instagram Picture URL">
-                      <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Download</a>
+                    
+                    <form id="main_form" action="/process.php" method="post">
+                        Paste URL:                        
+                        <div class="main_input_wrapper">
+                            <input autofocus placeholder="https://instagram.com/p/41SW_pmmq4/" name="url" value=""/>
+                        </div>
+                        <div class="actions">
+                      <input type="submit" value="Download" class="button"/>
+                                </div>
                     </form>
+                    
+                                  <div id="zen">
+                      </div>
+                                <div id="results"></div>
+                    <div id="waiting">
+                      <div class="loading">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                    </div>
 
+                    <div id="results"></div>
+                    <div id="waiting">
+                      <div class="loading">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
     </section>
+    
+
 
 
     <div class="col-lg-4 col-lg-offset-2 text-center">

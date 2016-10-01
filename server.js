@@ -3,13 +3,20 @@ const http = require("http");
 const path = require("path");
 var handlebars = require("express-handlebars");
 var mongoose = require("mongoose");
-var express = require('express');
-var app = express();
+var express = require('express')
+  , cors = require('cors')
+  , app = express();
+var $ = require('jquery');
 
 var router = {
     index: require("./routes/index"),
     about: require("./routes/about"),
     download: require("./routes/download")
+};
+
+var corsOptions = {
+  origin: 'https://instagram.com/p/BLA29O8DHD2/',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
 };
 
 var parser = {
@@ -29,19 +36,33 @@ db.open(function(err, db) {
   }
 });
 
+var allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', 'example.com');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
 
+    next();
+}
+
+ 
 
 // Middleware
 app.set("port", process.env.PORT || 3000);
 app.engine("html", handlebars());
 app.set("view engine", "html"); 
 app.set("views", __dirname + "/views");
+app.use(allowCrossDomain);
 app.use(express.static(path.join(__dirname, "public")));
 app.use(parser.body.urlencoded({ extended: false }));
 app.use(parser.body.json());
 app.use(logErrors);
 app.use(clientErrorHandler);
 app.use(errorHandler);
+app.use(cors());
+
+
+
+// Add headers
 
 // Routes
 app.get("/", router.index.view);
