@@ -1,19 +1,35 @@
 {
-  "name": "instagramPhotoDownloader",
+  "name": "instagram_photo_customizer",
   "version": "0.0.0",
-  "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "mongod --dbpath dbpath --logpath log/mongod.log&",
+    "start": "node server.js"
   },
   "dependencies": {
     "body-parser": "~1.15.1",
     "bootstrap": "^3.3.7",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
-    "ejs": "^2.5.2",
     "express": "~4.13.4",
     "express-handlebars": "^3.0.0",
+    "mongodb": "^2.2.10",
+    "mongoose": "^4.6.2",
     "morgan": "~1.7.0",
+    "passport-instagram": "^1.0.0",
     "serve-favicon": "~2.3.0"
-  }
+  },
+  "description": "cutomize size of the instagaram photo and dowload them",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dkim0526/sdHack2017.git"
+  },
+  "author": "Daniel Kim, Lowan Kim, Lingyi Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dkim0526/sdHack2017/issues"
+  },
+  "homepage": "https://github.com/dkim0526/sdHack2017"
 }

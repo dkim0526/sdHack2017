@@ -1,0 +1,23 @@
+2016-09-30T23:39:49.830-0700 [initandlisten] MongoDB starting : pid=611 port=27017 dbpath=dbpath 64-bit host=Beumjoos-MacBook-Pro.local
+2016-09-30T23:39:49.830-0700 [initandlisten] db version v2.6.7
+2016-09-30T23:39:49.830-0700 [initandlisten] git version: nogitversion
+2016-09-30T23:39:49.830-0700 [initandlisten] build info: Darwin miniyosemite.local 14.1.0 Darwin Kernel Version 14.1.0: Fri Dec  5 06:49:27 PST 2014; root:xnu-2782.10.67~9/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2016-09-30T23:39:49.830-0700 [initandlisten] allocator: tcmalloc
+2016-09-30T23:39:49.830-0700 [initandlisten] options: { storage: { dbPath: "dbpath" }, systemLog: { destination: "file", path: "log/mongod.log" } }
+2016-09-30T23:39:49.830-0700 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (dbpath) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2016-09-30T23:39:49.830-0700 [initandlisten] dbexit: 
+2016-09-30T23:39:49.830-0700 [initandlisten] shutdown: going to close listening sockets...
+2016-09-30T23:39:49.830-0700 [initandlisten] shutdown: going to flush diaglog...
+2016-09-30T23:39:49.830-0700 [initandlisten] shutdown: going to close sockets...
+2016-09-30T23:39:49.830-0700 [initandlisten] shutdown: waiting for fs preallocator...
+2016-09-30T23:39:49.830-0700 [initandlisten] shutdown: lock for final commit...
+2016-09-30T23:39:49.830-0700 [initandlisten] shutdown: final commit...
+2016-09-30T23:39:49.830-0700 [initandlisten] shutdown: closing all files...
+2016-09-30T23:39:49.830-0700 [initandlisten] closeAllFiles() finished
+2016-09-30T23:39:49.830-0700 [initandlisten] dbexit: really exiting now

@@ -1,9 +1,10 @@
-var express = require('express');
-var router = express.Router();
+exports.view = function(req, res) {
+    var models = require('../models');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
-module.exports = router;
+    var data = {data: []};
+    // res.render("index", data);
+    console.log("THIS IS THE TEST");
+    var express = require('express'); // Get the module
+	var app = express(); // Create express by calling the prototype in var express
+	res.render("index");
+}
