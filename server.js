@@ -11,12 +11,13 @@ var $ = require('jquery');
 var router = {
     index: require("./routes/index"),
     about: require("./routes/about"),
-    download: require("./routes/download")
+    download: require("./routes/download"),
+    contact: require("./routes/contact")
 };
 
 var corsOptions = {
   origin: 'https://instagram.com/p/BLA29O8DHD2/',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
 var parser = {
@@ -44,12 +45,12 @@ var allowCrossDomain = function(req, res, next) {
     next();
 }
 
- 
+
 
 // Middleware
 app.set("port", process.env.PORT || 3000);
 app.engine("html", handlebars());
-app.set("view engine", "html"); 
+app.set("view engine", "html");
 app.set("views", __dirname + "/views");
 app.use(allowCrossDomain);
 app.use(express.static(path.join(__dirname, "public")));
@@ -66,11 +67,14 @@ app.use(cors());
 
 // Routes
 app.get("/", router.index.view);
-// POST method route
 
+// POST method route
+app.get('/contact', router.contact.view);
 app.get('/about', router.about.view);
 
 app.get('/download', router.download.view);
+
+
 
 
 app.use(function(err, req, res, next) {

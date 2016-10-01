@@ -1,0 +1,26 @@
+body {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#aboutHeader {
+  padding-left: 5%;
+}
+
+#aboutTab {
+  color: #00B7FF;
+}
+
+#about {
+  width:100%;
+  height:100%;
+  position:
+  background:#00B7FF;
+  top:0;
+  left:0;
+}
+
+#lastParag {
+  padding-bottom: 5%;
+}

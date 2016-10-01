@@ -11,6 +11,10 @@
     <script type="text/javascript" src="../javascripts/instafeed.min.js"></script>
     <script type="text/javascript" src="../javascripts/insta.js"></script>
 
+    <link href="../stylesheets/css_contact/default.css" rel="stylesheet" type="text/css" />
+    <script src="../stylesheets/js_contact/jquery.js" type="text/javascript"></script>
+    <script src="../stylesheets/js_contact/validate.min.js" type="text/javascript"></script>
+    <script src="../stylesheets/js_contact/init.js" type="text/javascript"></script>
 
     <title>Creative - Start Bootstrap Theme</title>
 
@@ -23,9 +27,6 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
-    <!-- Theme CSS -->
-    <link href="../stylesheets/style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,17 +46,17 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="/">InstaPicDownloader</a>
+                <a class="navbar-brand page-scroll" href="/" id="logo">InstaPicDownloader</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="/about">About</a>
+                        <a class="page-scroll" href="/about" id="aboutTab">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/contact">Contact</a>
+                        <a class="page-scroll" href="/contact" id="contactTab">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -71,30 +72,59 @@
     </header>
 
     <section class="bg-primary" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <hr>
-                    <h2 class="section-heading">Download Instagram Picture Now!</h2>
-                    <hr class="light">
-                    <p class="text-faded1">1. Copy the URL from Instagram.<br>
-                    <p class="text-faded2">2. Paste the URL to the textbox.<br>
-                    <p class="text-faded3">3. Click Download button.<br>
-                    <p class="text-faded4">4. Customize your picture quality!</p>
 
-                    <form id="main_form" action="/process.php" method="post">
-                      Paste URL:
-                      <div class="main_input_wrapper">
-                        <input autofocus placeholder="https://instagram.com/p/41SW_pmmq4/" name="url" value=""/>
-                      </div>
-                      <div class="actions">
-                        <input type="submit" value="Download" class="button"/>
-                      </div>
-                    </form>
-
-                </div>
-            </div>
+      <form id="form" class="blocks" action="#" method="post">
+        <h2 class="section-heading">Contact our Developers!</h2>
+        <hr class="light">
+        <div class="social-icon" id="Daniel">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-google"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-file-text-o"></i></a>
         </div>
+        <div class="social-icon" id="Lingyi">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-google"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-file-text-o"></i></a>
+        </div>
+        <div class="social-icon" id="Lowan">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-google"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-file-text-o"></i></a>
+        </div>
+
+        <h2 class="section-heading">Give us any feedbacks!</h2>
+        <hr class="light">
+        <p>
+          <label>Name:</label>
+          <input type="text" class="text" name="name" />
+        </p>
+        <p>
+          <label>Company:</label>
+          <input type="text" class="text" name="company" />
+        </p>
+        <p>
+          <label>Your e-mail:</label>
+          <input type="text" class="text" name="email" />
+        </p>
+        <p>
+          <label>Contact number:</label>
+          <input type="text" class="text" name="phone" />
+        </p>
+        <p class="area">
+          <label>Message:</label>
+          <textarea class="textarea" name="message"></textarea>
+        </p>
+        <p>
+          <label>&nbsp;</label>
+          <input type="submit" class="btn" value="Submit"/>
+        </p>
+      </form>
     </section>
 
 

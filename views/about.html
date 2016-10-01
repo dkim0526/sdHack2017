@@ -8,9 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <script src="../javascripts/vendor/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="../javascripts/instafeed.min.js"></script>
-    <script type="text/javascript" src="../javascripts/insta.js"></script>
 
 
     <title>Creative - Start Bootstrap Theme</title>
@@ -25,58 +22,75 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" type="text/css" href="../stylesheets/style_about.css">
+
     <!-- Theme CSS -->
-    <link href="../stylesheets/style.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
-</head>
+<body id="page-top">
 
-    <body class="loading">
-  
-        <div id="wrapper">
-            <div id="bg"></div>
-            <!--<div id="overlay"></div>-->
-            <div id="main">
-                <!-- Header -->
-                    <header id="header">
-                        <h1 class="logo"><a href="/">DownloadGram</a></h1>
-                        <p class="subtitle">Instagram photo and video downloader</p>
-            <form id="main_form" action="/process.php" method="post">
-              <input name="build_id" value="6fdc4fca53bedd96f31da252ca4fa36193bd3f5f" type="hidden" />
-              <input name="build_time" value="1475336431" type="hidden" />
-            <input name="build_key" value="876fe795832fd7e066d02de3cdaf27bb53fd850b" type="hidden" />                        <div class="main_input_wrapper">
-                            <input autofocus placeholder="https://instagram.com/p/41SW_pmmq4/" name="url" value=""/>
-                        </div>
-                        <div class="actions">
-              <input type="submit" value="Download" class="button" />
-                        </div>
-            </form>
-            
-                          <div id="zen">
-              </div>
-                        <div id="results"></div>
-            <div id="waiting">
-              <div class="loading">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="/">InstaPicDownloader</a>
             </div>
-            <div id="waitingdls">Your download will start in a few seconds.</div>
-                    </header>
 
-                <!-- Footer -->
-                    <footer id="footer">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="/about" id="aboutTab">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
 
-                    </footer>
+    <header id="header">
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 id="aboutHeader">About</h1>
+
+                <div id="instafeed"></div>
             </div>
         </div>
-    </body>
+    </header>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">We've got what you need!</h2>
+                    <hr class="light">
+                    <p class="text-faded">Have you ever felt like it would be nice to donwload certain photos on Instagram?
+                      Have you ever wanted to re-download your old photos on Instagram to your desktop? Well, now you have it!
+                      InstaPicDownloader downloads any pictures on Instagram as long as you provide a link.</p>
+
+                    <h2 class="section-heading">Developers</h2>
+                    <hr class="light">
+                    <p class="text-faded">Developed by outstanding three Computer Science students at University of California, San Diego,
+                       during SD Hackathon.</p>
+
+                    <h2 class="section-heading">Vision</h2>
+                    <hr class="light">
+                    <p class="text-faded" id="lastParag">We hope to see other people to utilize this website in order to download their favorite pictures.
+                    Even though there are other websites that does a similar function, our pros is that it's very simple and easy to use;
+                    Most importantly, users are able to customize their pixel density!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
 
 </html>
