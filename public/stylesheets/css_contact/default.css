@@ -40,7 +40,7 @@ padding:5px 10px;
 height:27px;
 border:1px solid #ddd;
 color:#333;
-background:url(../gfx/bginput.jpg) repeat-x bottom #fff;
+background:url(../gfx_contact/bginput.jpg) repeat-x bottom #fff;
 position:relative;
 z-index:2;
 }
@@ -81,14 +81,14 @@ background-position:257px 16px;
 }
 
 .blocks label.ok {
-background-image:url(../gfx/icook.gif);
+background-image:url(../gfx_contact/icook.gif);
 background-color:#deefca;
 color:#577530;
 margin-left: 250px;
 }
 
 .blocks label.error {
-background-image:url(../gfx/icofail.gif);
+background-image:url(../gfx_contact/icofail.gif);
 background-color:#f5d6d7;
 color:#c81925;
 margin-left: 250px;
