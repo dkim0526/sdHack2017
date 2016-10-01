@@ -9,6 +9,7 @@ var app = express();
 var router = {
     index: require("./routes/index"),
     about: require("./routes/about"),
+    download: require("./routes/download")
 };
 
 var parser = {
@@ -47,6 +48,8 @@ app.get("/", router.index.view);
 // POST method route
 
 app.get('/about', router.about.view);
+
+app.get('/download', router.download.view);
 
 
 app.use(function(err, req, res, next) {
