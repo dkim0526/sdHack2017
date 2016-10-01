@@ -4,7 +4,7 @@ $(function(){
   $('#submitButton').attr('disabled', true);
   var inputs = $('input[type="text"]');
   var goodForm = false;
-  $(inputs).change(function(){
+  $(inputs).keyup(function(){
     for(var i = 0; i < inputs.length; i++){                  
         console.log($($(inputs[i])).next().hasClass('ok'));        
         console.log(inputs.length);
