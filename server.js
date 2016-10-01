@@ -3,12 +3,12 @@ const http = require("http");
 const path = require("path");
 var handlebars = require("express-handlebars");
 var mongoose = require("mongoose");
-
 var express = require('express');
 var app = express();
 
 var router = {
-    index: require("./routes/index")
+    index: require("./routes/index"),
+    about: require("./routes/about"),
 };
 
 var parser = {
@@ -29,6 +29,7 @@ db.open(function(err, db) {
 });
 
 
+
 // Middleware
 app.set("port", process.env.PORT || 3000);
 app.engine("html", handlebars());
@@ -44,6 +45,9 @@ app.use(errorHandler);
 // Routes
 app.get("/", router.index.view);
 // POST method route
+
+app.get('/about', router.about.view);
+
 
 app.use(function(err, req, res, next) {
   console.error(err.stack);
